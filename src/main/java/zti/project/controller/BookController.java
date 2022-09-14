@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import zti.project.Utils.BookData;
 import zti.project.Utils.ReviewData;
+import zti.project.Utils.UserData;
 import zti.project.model.Book;
 import zti.project.model.Review;
 import zti.project.model.User;
@@ -37,6 +38,11 @@ public class BookController {
     public List<BookData> getBooks() {
         List<Book> books = bookRepository.findAll();
         return books.stream().map(BookData::new).collect(Collectors.toList());
+    }
+
+    @GetMapping("/{id}")
+    public  BookData getBookById(@PathVariable("id") String id){
+        return new BookData(bookRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Book not found")));
     }
 
     @GetMapping("/author/{author}")

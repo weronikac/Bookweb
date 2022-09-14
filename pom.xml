@@ -13,17 +13,10 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>Bookweb</name>
     <description>Demo project for Spring Boot</description>
-    <properties>
-<<<<<<< HEAD
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-=======
         <properties>
  <maven.compiler.source>1.8</maven.compiler.source>
  <maven.compiler.target>1.8</maven.compiler.target>
 </properties>
->>>>>>> 0f54e949278e0738b4c1e3f0dfc0e879eec61151
-    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
